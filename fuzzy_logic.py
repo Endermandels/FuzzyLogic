@@ -58,7 +58,7 @@ def main():
     # Define membership functions
     temperature_functions = {
         "frigid": lambda x: max(0, min(1, (MAX_FRIGID - x) / 10)),
-        "cold": lambda x: max(0, min(1, (MAX_COLD - x) / 20 if x > 15 else (x - MIN_COLD) / 20)),
+        "cold": lambda x: max(0, min(1, (MAX_COLD - x) / 15 if x > 15 else (x - MIN_COLD) / 25)),
         "warm": lambda x: max(0, min(1, (x - MIN_WARM) / 10 if x < 30 else (MAX_WARM - x) / 10)),
         "hot": lambda x: max(0, min(1, (x - MIN_HOT) / 20)),
     }
